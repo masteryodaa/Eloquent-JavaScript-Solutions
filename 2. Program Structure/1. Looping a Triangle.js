@@ -9,23 +9,26 @@
 // ######
 // #######
 
-let triangle = '#';
-
-do{
-    console.log(triangle);
-    triangle += '#';
-}
-while(triangle.length<9);
 
 
+// // Method 1 
+// let triangle = '#';
 
-for (let index = 1; index < 9; index++) {
-    console.log('#'.repeat(index)); 
-    //think of it as multiplying string with number to repeat that string follwing times  
-}
+// do{
+//     console.log(triangle);
+//     triangle += '#';
+// }
+// while(triangle.length<9);
 
 
+// // Method 2
+// for (let index = 1; index < 9; index++) {
+//     console.log('#'.repeat(index)); 
+//     //think of it as multiplying string with number to repeat that string follwing times  
+// }
 
+
+// Method 3
 let newTriangle = '#';
 
 while (newTriangle.length<9) {
