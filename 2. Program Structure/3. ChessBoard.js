@@ -15,7 +15,7 @@
 
 
 // Method 1
-// const size = 10;
+// const size = 10; // mxm grid
 
 
 // for(let i=1; i<=size; i++){
@@ -39,7 +39,7 @@
 
 
 // Method 2
-// const size = 8;
+// const size = 8; //mxm grid
 
 // for (let i=1; i<=size; i++){
 
@@ -70,7 +70,7 @@
 
 // Method 3
 
-var row=8, col=8;
+var row=8, col=8; // mxn grid
 
 for(let x=1; x<=row; x++){
     let temp='';
