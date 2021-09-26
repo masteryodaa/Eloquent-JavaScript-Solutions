@@ -5,3 +5,28 @@
 If you haven’t already, also write a recursive version of nth. */
 
 
+let list = null;
+
+function arrayToList(array){
+
+    if (array.length==0) {
+        return list;
+    } 
+    else {
+
+        list={
+            value:array[array.length-1],
+            rest:list
+        }
+    
+        return arrayToList(array.slice(0, array.length-1));
+    }
+
+}
+
+console.log(arrayToList([10,20,30,40]));
+// → {value: 10, rest: {value: 20, rest: null}}
+
+
+
+
