@@ -10,3 +10,28 @@
 
 
 
+function deepEqual(obj1, obj2) {
+    if (obj1 === obj2) return true;
+    
+    if ((obj1 || obj2) == null || typeof (obj1 || obj2) != "object") return false;
+  
+    let key1 = Object.keys(obj1), key2 = Object.keys(obj2);
+  
+    if (key1.length != key2.length) return false;
+  
+    for (let k=0; k<=key1.length-1; k++) {
+      if (!key2.includes(key1[0]) || !deepEqual(obj1[key1[0]], obj2[key1[0]])) return false;
+    }
+  
+    return true;
+  }
+
+
+
+let obj = {here: {is: "an"}, object: 2};
+console.log(deepEqual(obj, obj));
+// → true
+console.log(deepEqual(obj, {here: 1, object: 2}));
+// → false
+console.log(deepEqual(obj, {here: {is: "an"}, object: 2}));
+// → true
