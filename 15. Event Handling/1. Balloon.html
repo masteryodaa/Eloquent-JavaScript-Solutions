@@ -1,0 +1,28 @@
+
+<p>🎈</p>
+
+<script>
+  let p = document.querySelector("p");
+  let size;
+  function setSize(newSize) {
+    size = newSize;
+    p.style.fontSize = size + "px";
+  }
+  setSize(20);
+
+  function arrowKey(e) {
+    if (e.key == "ArrowUp") {
+      if (size > 70) {
+        p.textContent = "💥";
+        document.body.removeEventListener("keydown", arrowKey);
+      } else {
+        setSize(size * 1.1);
+        e.preventDefault();
+      }
+    } else if (e.key == "ArrowDown") {
+      setSize(size * 0.9);
+      e.preventDefault();
+    }
+  }
+  document.body.addEventListener("keydown", arrowKey);
+</script>
